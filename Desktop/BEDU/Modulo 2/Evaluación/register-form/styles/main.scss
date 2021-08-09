@@ -1,0 +1,165 @@
+:root{
+    font-size: 16px;
+    --transition-speed: 600ms;
+}
+$dark-primary-color: #001427;
+$light-primary-color: white;
+$accent-colors: #f18805;
+$accent-colors_2: #fde92f;
+$text-icons: #5a5d6c; 
+
+body{
+    background: $light-primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) ), url("../img/Proyectos/Chedraui\ San\ José\ del\ Cabo.JPG");
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: $light-primary-color;
+    font-size: 2rem;
+}
+
+p.sub-title{
+    color: $light-primary-color;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+#contact-container{
+    width: 1200px;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    padding: 8px;
+    display: flex;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 4px 11px 19px -7px rgba(0,0,0,0.86);
+    .contact-info{
+        background-color:$accent-colors ;
+        border-radius: 1.2rem;
+        flex: 0 1 40%;
+        padding: 30px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        h4{
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        p{
+            margin: 0;
+            margin-bottom: 2.2rem;
+            font-size: 1.2rem;
+            color: $light-primary-color;
+        }
+        .icon-text{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 1rem;
+            .fa{
+                flex: 0 0 20px;
+                font-size: 1.2rem;
+                margin-right: 1rem;
+                color: $light-primary-color;
+            }
+            span{
+                font-size: 1rem;
+                font-weight: 200;
+            }
+        }
+        .social-media{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            padding-top: 5rem;
+            .icon-circle{
+             flex: 0 0 40px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 50%;
+             height: 40px;
+             
+             transition: .3s all ease-in-out;
+             &:hover{
+                 background:$dark-primary-color;
+             }
+            }
+            .fa{
+                font-size: 25px;
+            }
+        }
+
+    }
+    form{
+        padding: 40px;
+        width: 100%;
+        .col{
+            display: flex;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+        .form-group{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex: 0 1 100%;
+            padding-right: 40px;
+            label{
+                font-size: .9;
+                color: white;
+                margin-bottom: 1rem;
+            }
+            input[type="text"], input[type="phone"], input[type="email"],input[type="password"]{
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid rgba(255,255,255, 0.2);
+                transition: all .3s ease-in-out;
+                padding: 8px;
+                font-size: 1rem;
+                font-weight: 300;    
+                color: $light-primary-color;
+                margin-bottom: 2rem;
+                &:focus{
+                    border:none;
+                    outline: none;
+                    border-bottom: 2px solid $accent-colors_2;
+                }
+            }
+            &:nth-child(2){
+                padding-right: 0;
+            }
+
+            &.solo{
+                padding: 0;
+            }
+            &.right{
+                align-items: flex-end;
+            }
+            button{
+                width: 200px;
+                height: 60px;
+                cursor: pointer;
+                background: $accent-colors;
+                border: none;
+                border-radius: 1rem;
+                color: white;
+                font-size: 1rem;
+                transition: .3s all ease-in-out;
+                &:hover{
+                    background:$dark-primary-color;
+                }
+            }
+        }
+    }
+}
